@@ -216,6 +216,20 @@ public class ResourceCentre {
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
+		//Zi En
+		ResourceCentre.viewAllChromebook(chromebookList);
+        String tag = Helper.readString("Enter asset tag > ");
+        boolean isLoaned = false;
+       
+        for (int i = 0 ; i < chromebookList.size() ; i++ ) {
+            if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) && chromebookList.get(i).getIsAvailable() == true) {
+                String due = Helper.readString("Enter due date > ");
+                chromebookList.get(i).setIsAvailable(false);
+                chromebookList.get(i).setDueDate(due);
+                isLoaned = true;
+                System.out.println("Chromebook " + tag + " is loaned out");
+            }
+        }
 		
 		
 	}

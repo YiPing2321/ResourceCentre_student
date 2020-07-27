@@ -127,7 +127,7 @@ public class ResourceCentreTest {
 		//XinRu
 		//fail("Not yet implemented");
 		// write your code here
-		//checked for valid camcorder arraylist to return to
+		//checked for valid Camcorder arraylist to return to
 		assertNotNull("Test if there is valid Camcorder arraylist to return to", camcorderList);
 		ResourceCentre.doReturnCamcorder(camcorderList, cc1.getAssetTag());
 		assertTrue("Test if item has been returned", cc1.getIsAvailable());

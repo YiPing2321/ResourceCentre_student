@@ -174,11 +174,18 @@ public class ResourceCentre {
 		Chromebook cb =null;
 		// write your code here
 		return cb;
-		
+
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
+		String tag = Helper.readString("Enter asset tag > ");
+		String description = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+		
+		chromebookList.add(new Chromebook(tag, description, os));
+		System.out.println("Chromebook added");
 	}
+
 	
 	//================================= Option 3 Loan =================================
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
@@ -217,7 +224,15 @@ public class ResourceCentre {
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 		
-		
+		ResourceCentre.viewAllChromebook(chromebookList);
+		String tag = Helper.readString("Enter asset tag > ");
+		String due = Helper.readString("Enter due date > ");
+		Boolean isLoaned =doLoanChromebook(chromebookList, tag, due);
+		if (isLoaned == false) {
+			System.out.println("Invalid asset tag");
+		} else {
+			System.out.println("Chromebook " + tag + " loaned out");
+		}
 	}
 	
 	//================================= Option 4 Return =================================
@@ -277,13 +292,4 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
-
-	public static void itemTypeMenu() {
-		// TODO Auto-generated method stub
-		ResourceCentre.setHeader("ITEM TYPES");
-		System.out.println("1. Camcorder");
-		System.out.println("2. Chromebook");
-	}
-
-
 }

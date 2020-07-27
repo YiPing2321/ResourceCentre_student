@@ -86,9 +86,11 @@ public class ResourceCentreTest {
 
 	@Test
 	public void doLoanCamcorderTest() {
+		//Marvin
 		//fail("Not yet implemented");
 		// write your code here
-		
+		//Test if there is valid camcorder arraylist to loan
+		assertNotNull("Test if there is valid Camcorder arraylist to loan from", camcorderList);
 	}
 	
 	@Test

@@ -116,6 +116,8 @@ public class ResourceCentreTest {
 		// write your code here
 		//Test if there is valid camcorder arraylist to loan
 		assertNotNull("Test if there is valid Camcorder arraylist to loan from", camcorderList);
+		assertTrue("Test if camcorder availability is true", cc1.getIsAvailable());
+		assertTrue("Test if camcorder availability is true", cc2.getIsAvailable());
 	}
 	
 	@Test

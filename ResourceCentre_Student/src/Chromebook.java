@@ -14,6 +14,10 @@ public class Chromebook extends Item{
 	public String toString(){
 		String output = "";
 		// Write your codes here
+		
+		   super.toString();
+		    output += "Optical Zoom: " + os + "\n";
+		  
 		return output;
 	}
 }

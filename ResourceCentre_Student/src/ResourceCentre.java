@@ -258,5 +258,13 @@ public class ResourceCentre {
 		// write your code here
 	}
 
+	public static void itemTypeMenu() {
+		// TODO Auto-generated method stub
+		ResourceCentre.setHeader("ITEM TYPES");
+		System.out.println("1. Camcorder");
+		System.out.println("2. Chromebook");
+	}
+	}
+
 
 }

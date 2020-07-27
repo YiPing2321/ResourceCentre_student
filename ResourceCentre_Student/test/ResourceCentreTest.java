@@ -101,7 +101,16 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		
+		ResourceCentre.setHeader("RETURN");
+		ResourceCentre.itemTypeMenu();
+
+		int itemType = Helper.readInt("Enter option to select item type > ");
+
+		if (itemType == 1) {
+
+			ResourceCentre.returnCamcorder(camcorderList);
+		}
+
 	}
 	@Test
 	public void doReturnChromebookTest() {

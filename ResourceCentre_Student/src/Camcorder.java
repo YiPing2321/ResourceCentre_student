@@ -15,6 +15,7 @@ public class Camcorder extends Item{
 		String output = "";
 		//Marvin
 		// Write your codes here
+		
 		output += String.format("%s,%s,%d",this.getAssetTag(),this.getDescription(),this.getOpticalZoom());
 		return output;
 	}

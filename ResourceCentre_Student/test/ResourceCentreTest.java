@@ -97,6 +97,14 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Zi En
+		 for (int i = 0; i < chromebookList.size() ; i++) {
+			 if (chromebookList.get(i).getIsAvailable() == false) {
+				 System.out.println("Invalid asset tag");
+	         } else {
+	             System.out.println("Chromebook " + chromebookList.get(i).getAssetTag() + " loaned out");
+	        }
+	    }
 	}
 	
 	@Test

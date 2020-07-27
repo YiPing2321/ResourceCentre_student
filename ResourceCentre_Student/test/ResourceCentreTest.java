@@ -122,7 +122,7 @@ public class ResourceCentreTest {
 		assertTrue("Test if item is been returned", cb2.getIsAvailable());
 		
 	}
-	//^Done by Guang Hao
+	//^Done by Guang Hao//
 	
 	@After
 	public void tearDown() throws Exception {

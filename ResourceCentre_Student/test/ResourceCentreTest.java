@@ -94,9 +94,18 @@ public class ResourceCentreTest {
 		
 	}
 	@Test
-	public void retrieveAllChromebookTest() {
+	public String retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		// Yi Ping
+		String output = "";
+		for (int i = 0; i < chromebookList.size(); i++) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", chromebookList.get(i).getAssetTag(),
+                    chromebookList.get(i).getDescription(), 
+                    ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
+                    chromebookList.get(i).getDueDate());
+		}
+		return output;
 	}
 
 	@Test

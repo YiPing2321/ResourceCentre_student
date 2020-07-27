@@ -94,7 +94,7 @@ public class ResourceCentreTest {
 		
 	}
 	@Test
-	public String retrieveAllChromebookTest() {
+	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
 		// Yi Ping
@@ -105,7 +105,8 @@ public class ResourceCentreTest {
                     ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
                     chromebookList.get(i).getDueDate());
 		}
-		return output;
+		String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+		assertEquals("Check that ViewAllCamcorderlist", output, allChromebook);
 	}
 
 	@Test

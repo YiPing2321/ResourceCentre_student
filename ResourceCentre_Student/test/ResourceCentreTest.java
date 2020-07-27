@@ -107,7 +107,20 @@ public class ResourceCentreTest {
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Check that there is a valid chromebook array to return 
+		assertNotNull("Test if there is valid ChromeBook arraylist to return to", chromebookList);
+		
+		//Returned the item
+		ResourceCentre.doReturnChromebook(chromebookList, cb1.getAssetTag());
+		
+		//Test that item is being returned
+		assertTrue("Test if item is been returned", cb1.getIsAvailable());
+		
+		//Test if that item have not been returned
+		assertTrue("Test if item is been returned", cb2.getIsAvailable());
+		
 	}
+	//^Done by Guang Hao
 	
 	@After
 	public void tearDown() throws Exception {

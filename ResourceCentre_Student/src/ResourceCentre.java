@@ -223,7 +223,7 @@ public class ResourceCentre {
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
-		//Zi En
+		//Zi En  
 		ResourceCentre.viewAllChromebook(chromebookList);
         String tag = Helper.readString("Enter asset tag > ");
         boolean isLoaned = false;
